@@ -1,38 +1,45 @@
-# CI/CD Tools and Practices Final Project Template
+# ci-cd-final-project
 
-This repository contains the template to be used for the Final Project for the Coursera course **CI/CD Tools and Practices**.
+## Project Description
 
-## Usage
+This project demonstrates Continuous Integration and Continuous Delivery (CI/CD) practices using GitHub Actions and OpenShift Pipelines (Tekton).
 
-This repository is to be used as a template to create your own repository in your own GitHub account. No need to Fork it as it has been set up as a Template. This will avoid confusion when making Pull Requests in the future.
+## Technologies Used
 
-From the GitHub **Code** page, press the green **Use this template** button to create your own repository from this template.
+- Python 3.9
+- Flask
+- Git and GitHub
+- GitHub Actions
+- OpenShift
+- Tekton Pipelines
+- Flake8 for code linting
+- Nose for unit testing
+- Docker for containerization
 
-Name your repo: `ci-cd-final-project`.
+## CI Workflow
 
-## Setup
+The GitHub Actions workflow automates the following steps:
 
-After entering the lab environment you will need to run the `setup.sh` script in the `./bin` folder to install the prerequisite software.
+1. Checkout the source code.
+2. Install Python dependencies.
+3. Run Flake8 linting.
+4. Execute unit tests using Nose.
 
-```bash
-bash bin/setup.sh
-```
+## OpenShift Pipeline
 
-Then you must exit the shell and start a new one for the Python virtual environment to be activated.
+The Tekton pipeline contains the following tasks:
 
-```bash
-exit
-```
+1. Cleanup
+2. Git Clone
+3. Flake8
+4. Nose
+5. Buildah
+6. Deploy
 
-## Tasks
+## Application
 
+The Flask application runs on port `8000`.
 
 ## License
 
-Licensed under the Apache License. See [LICENSE](/LICENSE)
-
-## Author
-
-Skills Network
-
-## <h3 align="center"> © IBM Corporation 2023. All rights reserved. <h3/>
+Licensed under the Apache License. See the [LICENSE](LICENSE) file.
